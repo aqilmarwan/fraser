@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from '@/components/Navbar';
 import Providers from '@/components/Providers';
 import { cn, constructMetadata } from '@/lib/utils';
@@ -30,6 +31,7 @@ export default function RootLayout({
           <Toaster />
           <Navbar />
           {children}
+          <Analytics />
         </body>
       </Providers>
     </html>
