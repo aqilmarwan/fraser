@@ -20,3 +20,7 @@ Built with the Next.js 13.5 App Router, tRPC, TypeScript, Prisma & Tailwind
 - 🌲 Pinecone as our Vector Storage
 - 📊 Prisma as our ORM
 - 🔤 100% written in TypeScript
+
+```bash
+Project Status : 🚧 This Project is curently unmonitored.
+```
