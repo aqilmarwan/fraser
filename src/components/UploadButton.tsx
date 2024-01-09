@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
 import { Button } from './ui/button';
-
+import { IconArrowRight, IconSearch } from "@tabler/icons-react";
 import Dropzone from 'react-dropzone';
 import { Cloud, File, Loader2 } from 'lucide-react';
 import { Progress } from './ui/progress';
@@ -88,9 +88,20 @@ const UploadDropzone = ({ isSubscribed }: { isSubscribed: boolean }) => {
         <div
           {...getRootProps()}
           className="border h-64 m-4 border-dashed border-gray-300 rounded-lg"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="flex items-center justify-center h-full w-full">
+          onClick={(e) => e.stopPropagation()}>
+          <div className="flex flex-col items-center justify-center h-full w-full">
+            <div className="relative w-full bg-gray-50 hover:bg-gray-100">
+              <IconSearch className="absolute top-3 w-10 left-1 h-6 rounded-full opacity-50 sm:left-3 sm:top-4 sm:h-8" />
+              <input
+                className="h-12 w-full text-sm text-zinc-700 font-semibold rounded-full border border-zinc-600 pr-12 pl-11 focus:border-zinc-800 focus:outline-none focus:ring-1 focus:ring-zinc-800 sm:h-16 sm:py-2 sm:pr-16 sm:pl-16 sm:text-lg"
+                type="text" 
+                placeholder='Paste Your PDF Link Here'/>
+              <button>
+                <IconArrowRight
+                  className="absolute opacity-50 right-2 top-2.5 h-7 w-7 sm:right-3 sm:top-3 sm:h-10 sm:w-10"
+                />
+              </button>
+            </div>
             <label
               htmlFor="dropzone-file"
               className="flex flex-col items-center justify-center w-full h-full rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
